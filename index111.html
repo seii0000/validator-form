@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="/on_tap/style.css">
+          <link rel="stylesheet" href="/on_tap/validator1.js">
+          <title>Bai tap 1</title>
+</head>
+
+<body>
+          <div class="main">
+                    <form action="" method="POST" class="form" id="form-1">
+                              <h3 class="heading">Form test</h3>
+                              <p class="desc">Bai tap tao form 1</p>
+
+                              <div class="space"></div>
+
+                              <div class="form-group">
+                                        <label for="fullname" class="form-label">Tên đầy đủ</label>
+                                        <input id="fullname" class="form-control" name="fullname" rules="required"
+                                                  type="text" placeholder="VD: Nguyen Van A">
+                                        <span class="form-message"></span>
+                              </div>
+
+                              <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input id="email" name="email" class="form-control" rules="required|email"
+                                                  type="text" placeholder="VD: a@gmail.com">
+                                        <span class="form-message"></span>
+                              </div>
+
+                              <div class="form-group">
+                                        <label for="password" class="form-label">Mật khẩu</label>
+                                        <input id="password" name="password" class="form-control" rules="required|min:6"
+                                                  type="password">
+                                        <span class="form-message"></span>
+                              </div>
+
+                              <div class="form-group">
+                                        <label for="password_confirmation" class=" form-label">Nhập lại mật khẩu</label>
+                                        <input id="password_confirmation" name="password_confirmation"
+                                                  class=" form-control" rules="required" type="password">
+                                        <span class="form-message"></span>
+                              </div>
+
+                              <button class="form-submit">Đăng kí</button>
+                    </form>
+          </div>
+          <script src="/on_tap/validator1.js"></script>
+          <script>
+                    Validator('#form-1')
+          </script>
+</body>
+
+</html>
